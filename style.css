@@ -1,9 +1,6 @@
-/* =========================================
-   1. VARIABLES & GLOBAL
-   ========================================= */
 :root {
-  --primary-color: #17a2b8;       /* User Requested Color */
-  --primary-dark: #117a8b;        /* Darker shade for hover */
+  --primary-color: #17a2b8;
+  --primary-dark: #117a8b;
   --purple-color: #9c27b0;
   --bg-light: #f6f7f8;
   --card-border: #eef0f2;
@@ -20,17 +17,13 @@ body {
 }
 
 .container {
-    max-width: 90% 
-  }
+  max-width: 90%;
+}
 
 a {
   text-decoration: none;
 }
 
-/* =========================================
-   2. CUSTOM BUTTONS & UTILITIES
-   ========================================= */
-/* Custom Primary Button (#17a2b8) */
 .btn-custom-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -47,13 +40,9 @@ a {
   box-shadow: 0 4px 12px rgba(23, 162, 184, 0.2);
 }
 
-/* Text Colors */
 .text-custom { color: var(--primary-color) !important; }
 .text-purple { color: var(--purple-color) !important; }
 
-/* =========================================
-   3. HEADER (NAVBAR)
-   ========================================= */
 .custom-navbar {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -61,26 +50,19 @@ a {
   padding: 15px 0;
 }
 
-.brand-name {
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--text-dark);
-  letter-spacing: -0.5px;
-}
-
-.nav-link {
+.navbar-nav .nav-link {
   color: var(--text-dark);
   font-size: 0.95rem;
   transition: color 0.2s;
 }
 
 .navbar-nav .nav-link.active {
-  color: var(--primary-color) !important; /* Blue color */
-  font-weight: 700; /* Bold text */
+  color: var(--primary-color) !important;
+  font-weight: 700;
   position: relative;
 }
 
-.navbar-nav .nav-link.active::after {
+.desktop-menu .navbar-nav .nav-link.active::after {
   content: '';
   display: block;
   width: 6px;
@@ -90,19 +72,56 @@ a {
   margin: 2px auto 0;
 }
 
-.nav-link:hover {
-  color: var(--primary-color);
-}
-
-.login-link:hover {
+.nav-link:hover, .login-link:hover {
   color: var(--primary-color) !important;
 }
 
-/* =========================================
-   4. HERO SECTION
-   ========================================= */
+/* Sidebar Styles */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  z-index: 1050;
+  padding: 20px 20px 20px;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-sidebar.active {
+  right: 0;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 1040;
+  display: none;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+.custom-toggler {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  padding: 5px;
+}
+
+/* End Sidebar Styles */
+
 .hero-section {
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: var(--bg-light);
 }
 
@@ -120,9 +139,6 @@ a {
   object-fit: cover;
 }
 
-/* =========================================
-   5. SPECIALTY CARDS
-   ========================================= */
 .specialty-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
@@ -135,27 +151,33 @@ a {
   border-color: var(--primary-color) !important;
 }
 
+.specialty-card img {
+  width: 50px;
+  height: 50px;
+}
+
 .icon-wrap {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-/* =========================================
-   6. SESSION CARDS (Webinars)
-   ========================================= */
-.session-card {
+.session-card, .advisor-card {
   border-color: var(--card-border) !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.session-card:hover {
+.session-card:hover, .advisor-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 }
 
-.card-img-top {
+.card-img-top.session-poster {
   border-bottom: 1px solid var(--card-border);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: contain;
 }
 
 .badge {
@@ -163,18 +185,9 @@ a {
   letter-spacing: 0.5px;
 }
 
-
-/* =========================================
-   7. ADVISOR CARDS
-   ========================================= */
-.advisor-card {
-  border-color: var(--card-border) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.advisor-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+.advisor-img-wrapper {
+  width: 100px;
+  height: 100px;
 }
 
 .advisor-card img {
@@ -182,18 +195,20 @@ a {
   background-color: #fff;
 }
 
-/* =========================================
-   8. ARCHIVE BANNER
-   ========================================= */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.fs-11 {
+  font-size: 11px;
+}
+
 .archive-banner {
   background: var(--gradient-banner);
   position: relative;
   overflow: hidden;
 }
 
-/* =========================================
-   9. FOOTER
-   ========================================= */
 .footer-section {
   background-color: var(--footer-bg);
 }
@@ -207,11 +222,8 @@ a {
   text-decoration: underline !important;
 }
 
-/* =========================================
-   10. MODALS (Forms)
-   ========================================= */
-.modal-content {
-  overflow: hidden;
+.footer-desc {
+  max-width: 350px;
 }
 
 .form-control:focus {
@@ -219,35 +231,88 @@ a {
   box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
 }
 
-/* Error message styling for jQuery Validation */
-.error-message {
+label.error {
   color: #dc3545;
   font-size: 0.8rem;
   margin-top: 4px;
-  display: none; /* Hidden by default */
+  display: block;
+  text-align: left;
 }
 
-/* Responsive adjustments */
+.form-control.error {
+  border-color: #dc3545;
+  background-image: none !important;
+}
+
+@media (max-width: 1025px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .custom-toggler {
+    display: block !important;
+  }
+
+  .mobile-sidebar .nav-item {
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+  }
+
+  .mobile-sidebar .nav-link {
+    padding: 10px 0;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1026px) {
+  .custom-toggler {
+    display: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
     padding: 40px 0;
     text-align: center;
   }
-  
+
   .hero-img-container {
     margin-top: 20px;
   }
-  
+
   .search-box {
     margin: 0 auto;
   }
-  
+
   .archive-banner {
     text-align: center;
   }
-  
+
   .archive-banner .d-flex {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .specialty-name {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    font-size: 1.1rem;
+  }
+  
+  .container {
+    max-width: 1500px;
+  }
+
+  .specialty-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  h1.display-5 {
+    font-size: 3.5rem;
   }
 }

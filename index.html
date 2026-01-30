@@ -4,33 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zydemy — Medical Webinar Platform</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-  <img src="Image/logo.png" alt="Zydemy Logo" height="40" class="d-inline-block align-text-top">
-</a>
-
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
+        <img src="Image/logo.png" alt="Zydemy Logo" height="40" class="d-inline-block align-text-top">
+      </a>
+      
+      <button class="custom-toggler border-0 bg-transparent d-lg-none" type="button" id="sidebarOpen">
+        <i class="fa-solid fa-bars fa-lg"></i>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarContent">
+      <div class="collapse navbar-collapse desktop-menu" id="navbarContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
-  <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li> 
-  <li class="nav-item"><a class="nav-link px-3" href="webinar.html">Webinars</a></li>
-  <li class="nav-item"><a class="nav-link px-3" href="#">Advisors</a></li>
-  <li class="nav-item"><a class="nav-link px-3" href="#">Specialties</a></li>
-</ul>
-        
+          <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="webinar.html">Webinars</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Advisors</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Specialties</a></li>
+        </ul>
         <div class="d-flex align-items-center gap-3">
           <a href="#" class="text-decoration-none text-muted fw-bold login-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
           <a href="#" class="btn btn-custom-primary rounded-pill px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
@@ -39,25 +35,46 @@
     </div>
   </nav>
 
+  <div class="mobile-sidebar" id="mobileSidebar">
+    <div class="d-flex justify-content-end align-items-center mb-4 ps-2 pe-1 pt-1">
+      <button class="border-0 bg-transparent p-2" type="button" id="sidebarClose">
+        <i class="fa-solid fa-xmark fa-xl text-dark"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+      <ul class="navbar-nav fw-medium w-100">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="webinar.html">Webinars</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Advisors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Specialties</a></li>
+      </ul>
+      <div class="d-flex flex-column gap-3 mt-4 w-100">
+        <a href="#" class="btn btn-outline-secondary w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+        <a href="#" class="btn btn-custom-primary w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <section class="hero-section d-flex align-items-center">
     <div class="container">
       <div class="row align-items-center gy-5">
         <div class="col-lg-6">
-          <h1 class="display-4 fw-bolder text-dark mb-3 lh-sm">Advancing Medical <br>Knowledge, Together.</h1>
+          <h1 class="display-5 fw-bolder text-dark mb-3 lh-sm">Advancing Medical <br>Knowledge, Together.</h1>
           <p class="lead text-muted mb-4 fs-6">Zydemy is the centralized hub for premier medical webinars, connecting healthcare professionals with leading experts across all Zydus divisions.</p>
-
           <div class="search-box p-2 bg-white rounded-3 shadow-sm d-flex align-items-center border">
             <span class="px-3 text-muted">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <i class="fa-solid fa-magnifying-glass"></i>
             </span>
             <input type="text" class="form-control border-0 shadow-none" placeholder="Search webinars, speakers, or topics">
             <button class="btn btn-custom-primary px-4 rounded-2 fw-bold">Search</button>
           </div>
         </div>
-
         <div class="col-lg-6 text-center">
           <div class="hero-img-container bg-white p-2 rounded-4 shadow-sm d-inline-block">
-            <img src="Image/Ai.png" alt="Medical Discussion" class="img-fluid rounded-4" onerror="this.onerror=null;this.src='https://placehold.co/600x500/EFEFEF/AAAAAA?text=Image+Not+Found'">
+            <img src="Image/healthcare.png" alt="Medical Discussion" class="img-fluid rounded-4" onerror="this.onerror=null;this.src='https://placehold.co/600x500/EFEFEF/AAAAAA?text=Image+Not+Found'">
           </div>
         </div>
       </div>
@@ -70,59 +87,54 @@
         <h2 class="fw-bold text-dark">Explore by Specialty</h2>
         <p class="text-muted">Find content tailored to your field of expertise from our comprehensive list of medical specialties.</p>
       </div>
-
       <div class="row g-3 justify-content-center">
         <div class="col-6 col-md-4 col-lg-2">
           <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
             <div class="icon-wrap mb-3 text-custom">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 512 512" fill="currentColor"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84l-12 12-12-12c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+              <img src="Image/Cardiology.png" alt="Cardiology">
             </div>
-            <h6 class="fw-bold text-dark mb-0">Cardiology</h6>
+            <h6 class="fw-bold text-dark mb-0 specialty-name">Cardiology</h6>
           </div>
         </div>
         
         <div class="col-6 col-md-4 col-lg-2">
           <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
             <div class="icon-wrap mb-3 text-purple">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 512 512" fill="currentColor"><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></svg>
+              <img src="Image/Neurology.png" alt="Neurology">
             </div>
-            <h6 class="fw-bold text-dark mb-0">Neurology</h6>
+            <h6 class="fw-bold text-dark mb-0 specialty-name">Neurology</h6>
           </div>
         </div>
-
         <div class="col-6 col-md-4 col-lg-2">
           <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
             <div class="icon-wrap mb-3 text-info">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 640 512" fill="currentColor"><path d="M320 0c17.7 0 32 14.3 32 32V164.1c0 16.4 8.4 31.7 22.2 40.5l9.8 6.2V165.3C384 127 415 96 453.3 96c21.7 0 42.8 10.2 55.8 28.8c15.4 22.1 44.3 65.4 71 116.9c26.5 50.9 52.4 112.5 59.6 170.3c.2 1.3 .2 2.6 .2 4v7c0 49.1-39.8 89-89 89c-7.3 0-14.5-.9-21.6-2.7l-72.7-18.2C414 480.5 384 442.1 384 398V325l90.5 57.6c7.5 4.7 17.3 2.5 22.1-4.9s2.5-17.3-4.9-22.1L384 287.1v-.4l-44.1-28.1c-7.3-4.6-13.9-10.1-19.9-16.1c-5.9 6-12.6 11.5-19.9 16.1L256 286.7 161.2 347l-13.5 8.6c0 0 0 0-.1 0c-7.4 4.8-9.6 14.6-4.8 22.1c4.7 7.5 14.6 9.7 22.1 4.9l91.1-58V398c0 44.1-30 82.5-72.7 93.1l-72.7 18.2c-7.1 1.8-14.3 2.7-21.6 2.7c-49.1 0-89-39.8-89-89v-7c0-1.3 .1-2.7 .2-4c7.2-57.9 33.1-119.4 59.6-170.3c26.8-51.5 55.6-94.8 71-116.9c13-18.6 34-28.8 55.8-28.8C225 96 256 127 256 165.3v45.5l9.8-6.2c13.8-8.8 22.2-24.1 22.2-40.5V32c0-17.7 14.3-32 32-32z"/></svg>
+              <img src="Image/Pulmonology.png" alt="Pulmonology">
             </div>
-            <h6 class="fw-bold text-dark mb-0">Pulmonology</h6>
+            <h6 class="fw-bold text-dark mb-0 specialty-name">Pulmonology</h6>
           </div>
         </div>
-
         <div class="col-6 col-md-4 col-lg-2">
           <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
             <div class="icon-wrap mb-3 text-danger">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 512 512" fill="currentColor"><path d="M192 128c0-17.7 14.3-32 32-32s32 14.3 32 32v7.8c0 27.8 21.7 50.8 49.3 52.8l20.8 1.5c41.3 3 74 37.3 74 78.6v.5c0 12.8 10.4 23.2 23.2 23.2s23.2-10.4 23.2-23.2V256c0-44.2-35.8-80-80-80h-16v-8c0-53-43-96-96-96s-96 43-96 96v8h-16c-44.2 0-80 35.8-80 80v12.8c0 12.8 10.4 23.2 23.2 23.2s23.2-10.4 23.2-23.2V256c0-17.7 14.3-32 32-32h16.2c44.8 0 83.2 26.6 99.8 66.8l9.1 22.1c11.7 28.4 39.7 46.9 70.4 46.5l37.7-.5c4.7-.1 9.2 .7 13.5 2.1c16.9 5.6 28.5 21.5 28.5 39.3c0 22.1-17.9 40-40 40c-2.4 0-4.8-.2-7.1-.6l-41.1-7.1c-19.8-3.4-40.2-2-59.4 4.1l-14.7 4.7c-21 6.7-41 19-58 35.5l-3.3 3.2c-12.8 12.4-33.1 12.4-45.9 .1s-12.8-32.9-.4-45.3l3.3-3.3c8.9-8.6 19.3-15.1 30.3-18.6l14.7-4.7c10-3.2 20.7-3.9 31.1-2.1l41.1 7.1c40.7 7.1 79.2-20.1 86.1-60.8l.5-2.8c1-5.9 1.5-11.9 1.5-17.9v-.5c0-67.6-53.1-122.9-120.5-125.7l-20.8-1.5c-2.5-.2-5-.3-7.5-.3H224V128z"/></svg>
+              <img src="Image/Orthopedics.png" alt="Orthopedics">
             </div>
-            <h6 class="fw-bold text-dark mb-0">Orthopedics</h6>
+            <h6 class="fw-bold text-dark mb-0 specialty-name">Orthopedics</h6>
           </div>
         </div>
-
         <div class="col-6 col-md-4 col-lg-2">
           <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
             <div class="icon-wrap mb-3 text-info">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 448 512" fill="currentColor"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+              <img src="Image/Pediatrics.png" alt="Pediatrics">
             </div>
-            <h6 class="fw-bold text-dark mb-0">Pediatrics</h6>
+            <h6 class="fw-bold text-dark mb-0 specialty-name">Pediatrics</h6>
           </div>
         </div>
-
         <div class="col-6 col-md-4 col-lg-2">
           <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
             <div class="icon-wrap mb-3 text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 576 512" fill="currentColor"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>
+              <img src="Image/Ophthalmology.png" alt="Ophthalmology">
             </div>
-            <h6 class="fw-bold text-dark mb-0">Ophthalmology</h6>
+            <h6 class="fw-bold text-dark mb-0 specialty-name">Ophthalmology</h6>
           </div>
         </div>
       </div>
@@ -135,68 +147,57 @@
         <h2 class="fw-bold text-dark">Upcoming Live Sessions</h2>
         <p class="text-muted">Register now for our upcoming expert-led webinars.</p>
       </div>
-
       <div class="row g-4 justify-content-center">
-        <div class="col-md-6 col-lg-5"> <div class="card h-100 border rounded-4 shadow-sm overflow-hidden session-card">
-    <img src="Image/po1.png" class="card-img-top" alt="Classification of AUB" style="width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain;">
-    
-    <div class="card-body p-4 d-flex flex-column">
-      <div class="d-flex justify-content-between mb-2">
-        <span class="badge bg-light text-purple fw-bold border">Gynecology</span>
-        <span class="badge bg-light text-danger fw-bold border">1.0 CME</span>
-      </div>
-      
-      <h5 class="card-title fw-bold text-dark mb-2">Classification of AUB</h5>
-      <p class="text-muted small mb-2">Decoding AUB: Clarity Through Classification & Systematic Approach.</p>
-
-      <div class="text-muted small mb-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        Jan 04, 2026 - 11:00 AM to 12:00 PM
-      </div>
-
-      <div class="d-flex align-items-center mb-4">
-        <img src="Image/dr_indraneel.png" class="rounded-circle border me-3" width="50" height="50" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
-        <div class="lh-sm">
-          <div class="fw-bold text-dark small">Dr. Indraneel Ashok Jadhav</div>
-          <div class="text-muted small" style="font-size: 11px;">Consultant IVF & Gynecologist</div>
+        <div class="col-md-6 col-lg-5"> 
+          <div class="card h-100 border rounded-4 shadow-sm overflow-hidden session-card">
+            <img src="Image/poster_1.png" class="card-img-top session-poster" alt="Classification of AUB">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="badge bg-light text-purple fw-bold border">Gynecology</span>
+                <span class="badge bg-light text-danger fw-bold border">1.0 CME</span>
+              </div>
+              <h5 class="card-title fw-bold text-dark mb-2">Classification of AUB</h5>
+              <p class="text-muted small mb-2">Decoding AUB: Clarity Through Classification & Systematic Approach.</p>
+              <div class="text-muted small mb-3">
+                <i class="fa-regular fa-calendar-days me-1"></i>
+                Jan 04, 2026 - 11:00 AM to 12:00 PM
+              </div>
+              <div class="d-flex align-items-center mb-4">
+                <img src="Image/dr_indraneel.png" class="rounded-circle border me-3" width="50" height="50" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
+                <div class="lh-sm">
+                  <div class="fw-bold text-dark small">Dr. Indraneel Ashok Jadhav</div>
+                  <div class="text-muted small fs-11">Consultant IVF & Gynecologist</div>
+                </div>
+              </div>
+              <a href="#" class="btn btn-custom-primary w-100 mt-auto fw-bold py-2">Register Now</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <a href="#" class="btn btn-custom-primary w-100 mt-auto fw-bold py-2">Register Now</a>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-6 col-lg-5">
-  <div class="card h-100 border rounded-4 shadow-sm overflow-hidden session-card">
-    <img src="Image/po2.png" class="card-img-top" alt="Medical Management in AUB" style="width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain;">
-    
-    <div class="card-body p-4 d-flex flex-column">
-      <div class="d-flex justify-content-between mb-2">
-        <span class="badge bg-light text-purple fw-bold border">Gynecology</span>
-        <span class="badge bg-light text-danger fw-bold border">2.0 CME</span>
-      </div>
-      
-      <h5 class="card-title fw-bold text-dark mb-2">Medical Management in AUB</h5>
-      <p class="text-muted small mb-2">Guideline-aligned approach to optimizing medical therapy.</p>
-
-      <div class="text-muted small mb-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        Jan 25, 2026 - 4:00 PM to 5:00 PM
-      </div>
-
-      <div class="d-flex align-items-center mb-4">
-        <img src="Image/dr_vartika.png" class="rounded-circle border me-3" width="50" height="50" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
-        <div class="lh-sm">
-          <div class="fw-bold text-dark small">Dr. Vartika Srivastava</div>
-          <div class="text-muted small" style="font-size: 11px;">Consultant Gynecologist & Laparoscopic Surgeon</div>
+        <div class="col-md-6 col-lg-5">
+          <div class="card h-100 border rounded-4 shadow-sm overflow-hidden session-card">
+            <img src="Image/poster_2.png" class="card-img-top session-poster" alt="Medical Management in AUB">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="badge bg-light text-purple fw-bold border">Gynecology</span>
+                <span class="badge bg-light text-danger fw-bold border">2.0 CME</span>
+              </div>
+              <h5 class="card-title fw-bold text-dark mb-2">Medical Management in AUB</h5>
+              <p class="text-muted small mb-2">Guideline-aligned approach to optimizing medical therapy.</p>
+              <div class="text-muted small mb-3">
+                <i class="fa-regular fa-calendar-days me-1"></i>
+                Jan 25, 2026 - 4:00 PM to 5:00 PM
+              </div>
+              <div class="d-flex align-items-center mb-4">
+                <img src="Image/dr_vartika.png" class="rounded-circle border me-3" width="50" height="50" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
+                <div class="lh-sm">
+                  <div class="fw-bold text-dark small">Dr. Vartika Srivastava</div>
+                  <div class="text-muted small fs-11">Consultant Gynecologist & Laparoscopic Surgeon</div>
+                </div>
+              </div>
+              <a href="#" class="btn btn-custom-primary w-100 mt-auto fw-bold py-2">Register Now</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <a href="#" class="btn btn-custom-primary w-100 mt-auto fw-bold py-2">Register Now</a>
-    </div>
-  </div>
-</div>
-
-        
       </div>
     </div>
   </section>
@@ -207,12 +208,11 @@
         <h2 class="fw-bold text-dark">Meet Our Senior Advisors</h2>
         <p class="text-muted">Learn from the best. Our senior advisors are leading voices in their respective fields.</p>
       </div>
-
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 border rounded-4 text-center p-4 shadow-sm advisor-card">
-            <div class="mx-auto mb-3 position-relative" style="width: 100px; height: 100px;">
-              <img src="Image/4.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
+            <div class="mx-auto mb-3 position-relative advisor-img-wrapper">
+              <img src="Image/doctor_4.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
             </div>
             <h5 class="fw-bold text-dark mb-1">Dr. Marcus Thorne</h5>
             <div class="text-custom fw-bold small mb-2">Cardiovascular Surgery</div>
@@ -222,11 +222,10 @@
             </span>
           </div>
         </div>
-
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 border rounded-4 text-center p-4 shadow-sm advisor-card">
-            <div class="mx-auto mb-3 position-relative" style="width: 100px; height: 100px;">
-              <img src="Image/3.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
+            <div class="mx-auto mb-3 position-relative advisor-img-wrapper">
+              <img src="Image/doctor_3.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
             </div>
             <h5 class="fw-bold text-dark mb-1">Dr. Alisha Vance</h5>
             <div class="text-purple fw-bold small mb-2">Endocrinology</div>
@@ -236,11 +235,10 @@
             </span>
           </div>
         </div>
-
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 border rounded-4 text-center p-4 shadow-sm advisor-card">
-            <div class="mx-auto mb-3 position-relative" style="width: 100px; height: 100px;">
-              <img src="Image/2.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
+            <div class="mx-auto mb-3 position-relative advisor-img-wrapper">
+              <img src="Image/doctor_2.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
             </div>
             <h5 class="fw-bold text-dark mb-1">Dr. Samuel Lee</h5>
             <div class="text-danger fw-bold small mb-2">Oncology</div>
@@ -250,11 +248,10 @@
             </span>
           </div>
         </div>
-
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 border rounded-4 text-center p-4 shadow-sm advisor-card">
-            <div class="mx-auto mb-3 position-relative" style="width: 100px; height: 100px;">
-              <img src="Image/1.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
+            <div class="mx-auto mb-3 position-relative advisor-img-wrapper">
+              <img src="Image/doctor_1.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
             </div>
             <h5 class="fw-bold text-dark mb-1">Dr. Isabella Rossi</h5>
             <div class="text-info fw-bold small mb-2">Dermatology</div>
@@ -281,54 +278,47 @@
   </section>
 
   <footer class="footer-section text-white pt-5 pb-3">
-  <div class="container">
-    <div class="row g-4 mb-5">
-      
-      <div class="col-lg-5">
-        <div class="mb-3">
-          <img src="Image/logo2.png" alt="Zydemy Logo" height="35">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-5">
+          <div class="mb-3">
+            <img src="Image/logo2.png" alt="Zydemy Logo" height="35">
+          </div>
+          <p class="text-white-50 small mb-0 footer-desc">A unified webinar platform by Zydus, dedicated to advancing medical education for healthcare professionals.</p>
         </div>
-        <p class="text-white-50 small mb-0" style="max-width: 350px;">A unified webinar platform by Zydus, dedicated to advancing medical education for healthcare professionals.</p>
-      </div>
-
-      <div class="col-lg-2 col-6">
-        <h6 class="fw-bold mb-3">Quick Links</h6>
-        <ul class="list-unstyled d-flex flex-column gap-2">
-          <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Upcoming Webinars</a></li>
-          <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Webinar Archive</a></li>
-          <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Our Advisors</a></li>
-          <li><a href="#" class="text-white-50 text-decoration-none small hover-white">About Zydus</a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-2 col-6">
-        <h6 class="fw-bold mb-3">Specialties</h6>
-        <ul class="list-unstyled d-flex flex-column gap-2">
-          <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Cardiology</a></li>
-          <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Neurology</a></li>
-          <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Oncology</a></li>
-          <li><a href="#" class="text-white-50 text-decoration-none small hover-white">More...</a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-3">
-        <h6 class="fw-bold mb-3">Follow Us</h6>
-        <div class="d-flex gap-3">
-          <a href="#" class="text-white-50 hover-white"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.783 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-          <a href="#" class="text-white-50 hover-white"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.031-4.018-.201-7.577-2.122-9.958-5.044-.417.718-.656 1.549-.656 2.427 0 1.738.88 3.279 2.22 4.172-.816-.026-1.583-.249-2.257-.624v.053c0 2.426 1.723 4.437 3.998 4.895-.418.113-.863.173-1.325.173-.32 0-.63-.03-.93-.086.637 1.99 2.481 3.439 4.673 3.481-1.71 1.339-3.865 2.135-6.215 2.135-.403 0-.8-.024-1.19-.069 2.2 1.423 4.817 2.246 7.622 2.246 9.141 0 14.133-7.58 13.804-14.437.969-.699 1.801-1.575 2.459-2.548z"/></svg></a>
-          <a href="#" class="text-white-50 hover-white"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-3.875 3.245-3.875 8.816s-.022 8.55 3.875 8.816c3.6.245 11.626.246 15.23 0 3.897-.266 3.875-3.245 3.875-8.816s.022-8.55-3.875-8.816zm-10.615 12.816v-8l8 4-8 4z"/></svg></a>
+        <div class="col-lg-2 col-6">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Upcoming Webinars</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Webinar Archive</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Our Advisors</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">About Zydus</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="fw-bold mb-3">Specialties</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Cardiology</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Neurology</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Oncology</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">More...</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="fw-bold mb-3">Follow Us</h6>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 hover-white"><i class="fa-brands fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-white-50 hover-white"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white-50 hover-white"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          </div>
         </div>
       </div>
-
+      <hr class="border-secondary opacity-25">
+      <div class="text-center pt-2">
+        <p class="text-white-50 small mb-0">© 2026 Zydus Healthcare. All rights reserved. For use by healthcare professionals only.</p>
+      </div>
     </div>
-
-    <hr class="border-secondary opacity-25">
-    
-    <div class="text-center pt-2">
-      <p class="text-white-50 small mb-0">© 2025 Zydus Healthcare. All rights reserved. For use by healthcare professionals only.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -339,17 +329,14 @@
         <div class="modal-body p-5 pt-0 text-center">
           <h3 class="fw-bold mb-2">Welcome Back</h3>
           <p class="text-muted small mb-4">Please login to access your account.</p>
-          
           <form id="loginForm">
             <div class="mb-3 text-start">
               <label class="form-label small fw-bold">Email Address</label>
-              <input type="email" class="form-control bg-light border-0" id="loginEmail" placeholder="name@example.com">
-              <div class="invalid-feedback text-start">Please enter a valid email.</div>
+              <input type="email" class="form-control bg-light border-0" name="loginEmail" placeholder="Enter your email">
             </div>
             <div class="mb-4 text-start">
               <label class="form-label small fw-bold">Password</label>
-              <input type="password" class="form-control bg-light border-0" id="loginPassword" placeholder="••••••••">
-              <div class="invalid-feedback text-start">Password cannot be empty.</div>
+              <input type="password" class="form-control bg-light border-0" name="loginPassword" placeholder="Enter your password">
             </div>
             <button type="submit" class="btn btn-custom-primary w-100 fw-bold py-2">Login</button>
           </form>
@@ -367,27 +354,22 @@
         <div class="modal-body p-5 pt-0 text-center">
           <h3 class="fw-bold mb-2">Create Account</h3>
           <p class="text-muted small mb-4">Join Zydemy to access premium webinars.</p>
-          
           <form id="registerForm">
             <div class="mb-3 text-start">
               <label class="form-label small fw-bold">Full Name</label>
-              <input type="text" class="form-control bg-light border-0" id="regName" placeholder="Dr. John Doe">
-              <div class="invalid-feedback text-start">Name is required.</div>
+              <input type="text" class="form-control bg-light border-0" name="regName" placeholder="Enter your name">
             </div>
             <div class="mb-3 text-start">
               <label class="form-label small fw-bold">Email Address</label>
-              <input type="email" class="form-control bg-light border-0" id="regEmail" placeholder="name@example.com">
-              <div class="invalid-feedback text-start">Please enter a valid email.</div>
+              <input type="email" class="form-control bg-light border-0" name="regEmail" placeholder="Enter your email">
             </div>
             <div class="mb-3 text-start">
               <label class="form-label small fw-bold">Password</label>
-              <input type="password" class="form-control bg-light border-0" id="regPassword" placeholder="••••••••">
-              <div class="invalid-feedback text-start">Password must be at least 6 characters.</div>
+              <input type="password" class="form-control bg-light border-0" name="regPassword" id="regPassword" placeholder="Enter your password">
             </div>
             <div class="mb-4 text-start">
               <label class="form-label small fw-bold">Confirm Password</label>
-              <input type="password" class="form-control bg-light border-0" id="regConfirmPassword" placeholder="••••••••">
-              <div class="invalid-feedback text-start">Passwords do not match.</div>
+              <input type="password" class="form-control bg-light border-0" name="regConfirmPassword" placeholder="Enter your password">
             </div>
             <button type="submit" class="btn btn-custom-primary w-100 fw-bold py-2">Create Account</button>
           </form>
@@ -397,8 +379,8 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-
+  <script src="script/script.js"></script>
 </body>
 </html>

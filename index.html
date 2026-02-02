@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zydemy — Medical Webinar Platform</title>
+  <title>Home — Zydemy Learning Platform</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <img src="Image/logo.png" alt="Zydemy Logo" height="40" class="d-inline-block align-text-top">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="Image/logo.png" alt="Zydemy Logo" height="40" class="d-inline-block align-text-top" onerror="this.src='https://placehold.co/120x40?text=Zydemy'">
       </a>
       
       <button class="custom-toggler border-0 bg-transparent d-lg-none" type="button" id="sidebarOpen">
@@ -41,7 +42,6 @@
         <i class="fa-solid fa-xmark fa-xl text-dark"></i>
       </button>
     </div>
-
     <div class="sidebar-content">
       <ul class="navbar-nav fw-medium w-100">
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -55,267 +55,831 @@
       </div>
     </div>
   </div>
-  
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <section class="hero-section d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center gy-5">
-        <div class="col-lg-6">
-          <h1 class="display-5 fw-bolder text-dark mb-3 lh-sm">Advancing Medical <br>Knowledge, Together.</h1>
-          <p class="lead text-muted mb-4 fs-6">Zydemy is the centralized hub for premier medical webinars, connecting healthcare professionals with leading experts across all Zydus divisions.</p>
-          <div class="search-box p-2 bg-white rounded-3 shadow-sm d-flex align-items-center border">
-            <span class="px-3 text-muted">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
-            <input type="text" class="form-control border-0 shadow-none" placeholder="Search webinars, speakers, or topics">
-            <button class="btn btn-custom-primary px-4 rounded-2 fw-bold">Search</button>
+  <section class="home-hero">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-bottom-fade"></div>
+
+    <div class="container position-relative h-100 content-layer">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-8 col-xl-7 pt-5">
+          
+          <div class="d-inline-flex align-items-center gap-2 bg-white bg-opacity-10 rounded-pill px-3 py-1 mb-4 border border-white border-opacity-25 backdrop-blur">
+            <i class="fa-solid fa-star text-warning small"></i>
+            <span class="text-white small fw-bold">Trusted by 50,000+ Healthcare Professionals</span>
           </div>
-        </div>
-        <div class="col-lg-6 text-center">
-          <div class="hero-img-container bg-white p-2 rounded-4 shadow-sm d-inline-block">
-            <img src="Image/healthcare.png" alt="Medical Discussion" class="img-fluid rounded-4" onerror="this.onerror=null;this.src='https://placehold.co/600x500/EFEFEF/AAAAAA?text=Image+Not+Found'">
+
+          <h1 class="fw-bold text-white mb-3 lh-sm hero-title-wrapper">
+            <span class="d-block hero-title-main">Zydemy</span>
+            <span class="d-block text-gradient-light-gold hero-title-sub">Unified Learning Platform</span>
+            <span class="d-block hero-title-small">for Healthcare Professionals</span>
+          </h1>
+
+          <p class="lead text-white opacity-75 mb-5 fs-6 hero-desc">
+            Access centralized continuing medical education webinars across all Zydus divisions. Stay updated with the latest advancements in healthcare, pharmaceutical innovations, and clinical best practices—all in one comprehensive platform.
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+            <a href="webinar.html" class="btn btn-white-hero fw-bold px-4 py-3 d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-regular fa-calendar-check"></i>
+              Upcoming Webinars
+              <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+            <a href="#" class="btn btn-outline-hero fw-bold px-4 py-3 d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-regular fa-folder-open"></i>
+              Browse Archive
+            </a>
           </div>
+
+          <div class="d-flex flex-wrap align-items-center gap-4 gap-md-5 pt-4 border-top border-white border-opacity-25 pb-5 pb-lg-0">
+            
+            <div class="d-flex align-items-center gap-3">
+              <div class="avatar-stack">
+                <img src="Image/doctor_1.png" alt="Doctor 1" class="rounded-circle border border-2 border-white" onerror="this.src='https://placehold.co/45x45/png?text=1'">
+                <img src="Image/doctor_2.png" alt="Doctor 2" class="rounded-circle border border-2 border-white" onerror="this.src='https://placehold.co/45x45/png?text=2'">
+                <img src="Image/doctor_3.png" alt="Doctor 3" class="rounded-circle border border-2 border-white" onerror="this.src='https://placehold.co/45x45/png?text=3'">
+                <img src="Image/doctor_4.png" alt="Doctor 4" class="rounded-circle border border-2 border-white" onerror="this.src='https://placehold.co/45x45/png?text=4'">
+              </div>
+              <div class="text-white lh-1">
+                <div class="small fw-bold mb-1">Join 50,000+ Professionals</div>
+                <div class="small text-warning">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <span class="text-white opacity-75 ms-1">4.9/5 Rating</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-certificate text-warning fa-2x"></i>
+              <div class="text-white lh-1">
+                <div class="small fw-bold mb-1">CME Certified</div>
+                <div class="small opacity-75">Accredited Programs</div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-5">
+  <section class="stats-section py-5 bg-light">
     <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold text-dark">Explore by Specialty</h2>
-        <p class="text-muted">Find content tailored to your field of expertise from our comprehensive list of medical specialties.</p>
-      </div>
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-md-4 col-lg-2">
-          <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
-            <div class="icon-wrap mb-3 text-custom">
-              <img src="Image/Cardiology.png" alt="Cardiology">
+      <div class="row g-4 text-center justify-content-center">
+        
+        <div class="col-6 col-md-3">
+          <div class="d-flex flex-column align-items-center gap-2">
+            <div class="stat-icon-box mb-2">
+               <i class="fa-solid fa-video"></i>
             </div>
-            <h6 class="fw-bold text-dark mb-0 specialty-name">Cardiology</h6>
+            <div>
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Webinars Available</div>
+            </div>
           </div>
         </div>
+
+        <div class="col-6 col-md-3">
+          <div class="d-flex flex-column align-items-center gap-2">
+            <div class="stat-icon-box mb-2">
+               <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <div>
+              <div class="stat-number">200+</div>
+              <div class="stat-label">Expert Speakers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="d-flex flex-column align-items-center gap-2">
+            <div class="stat-icon-box mb-2">
+               <i class="fa-solid fa-building"></i>
+            </div>
+            <div>
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Zydus Divisions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="d-flex flex-column align-items-center gap-2">
+            <div class="stat-icon-box mb-2">
+               <i class="fa-solid fa-clock"></i>
+            </div>
+            <div>
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">On-Demand Access</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-section py-5">
+    <div class="container py-4">
+      
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6 mb-3">Why Choose Zydemy?</h2>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+          Experience the most comprehensive healthcare education platform designed specifically for medical professionals
+        </p>
+      </div>
+
+      <div class="row g-4">
+        
+        <div class="col-lg-4">
+          <div class="card feature-card h-100 border-0">
+            <div class="card-body p-4">
+              <div class="feature-icon-box icon-bg-1 mb-4 text-white">
+                <i class="fa-solid fa-microscope fa-xl"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Evidence-Based Content</h4>
+              <p class="text-muted small mb-4">
+                Access peer-reviewed, scientifically validated content from leading experts in pharmaceutical and medical sciences.
+              </p>
+              <ul class="list-unstyled feature-list small text-muted">
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> Clinical trial insights
+                </li>
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> Latest research findings
+                </li>
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> Best practice guidelines
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card feature-card h-100 border-0">
+            <div class="card-body p-4">
+              <div class="feature-icon-box icon-bg-2 mb-4 text-white">
+                <i class="fa-solid fa-certificate fa-xl"></i>
+              </div>
+              <h4 class="fw-bold mb-3">CME Accreditation</h4>
+              <p class="text-muted small mb-4">
+                Earn continuing medical education credits recognized by major medical boards and associations worldwide.
+              </p>
+              <ul class="list-unstyled feature-list small text-muted">
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> Instant certificate generation
+                </li>
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> Credit tracking dashboard
+                </li>
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> International recognition
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card feature-card h-100 border-0">
+            <div class="card-body p-4">
+              <div class="feature-icon-box icon-bg-3 mb-4 text-white">
+                <i class="fa-solid fa-users fa-xl"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Interactive Learning</h4>
+              <p class="text-muted small mb-4">
+                Engage with expert faculty through live Q&A sessions, case discussions, and collaborative learning experiences.
+              </p>
+              <ul class="list-unstyled feature-list small text-muted">
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> Live chat with speakers
+                </li>
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> Peer networking opportunities
+                </li>
+                <li class="mb-2 d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-check text-custom mt-1"></i> Discussion forums
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="specialty-section py-5 bg-light">
+    <div class="container py-4">
+      
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6 mb-3">Explore by Specialty</h2>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+          Curated content across all major medical specialties and therapeutic areas
+        </p>
+      </div>
+
+      <div class="row g-3">
         
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
-            <div class="icon-wrap mb-3 text-purple">
-              <img src="Image/Neurology.png" alt="Neurology">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Cardiology.png" alt="Cardiology" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Cardiology</h6>
+              <small class="text-muted">45 Webinars</small>
             </div>
-            <h6 class="fw-bold text-dark mb-0 specialty-name">Neurology</h6>
           </div>
         </div>
+
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
-            <div class="icon-wrap mb-3 text-info">
-              <img src="Image/Pulmonology.png" alt="Pulmonology">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Neurology.png" alt="Neurology" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Neurology</h6>
+              <small class="text-muted">38 Webinars</small>
             </div>
-            <h6 class="fw-bold text-dark mb-0 specialty-name">Pulmonology</h6>
           </div>
         </div>
+
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
-            <div class="icon-wrap mb-3 text-danger">
-              <img src="Image/Orthopedics.png" alt="Orthopedics">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Oncology.png" alt="Oncology" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Oncology</h6>
+              <small class="text-muted">52 Webinars</small>
             </div>
-            <h6 class="fw-bold text-dark mb-0 specialty-name">Orthopedics</h6>
           </div>
         </div>
+
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
-            <div class="icon-wrap mb-3 text-info">
-              <img src="Image/Pediatrics.png" alt="Pediatrics">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Pulmonology.png" alt="Pulmonology" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Pulmonology</h6>
+              <small class="text-muted">29 Webinars</small>
             </div>
-            <h6 class="fw-bold text-dark mb-0 specialty-name">Pediatrics</h6>
           </div>
         </div>
+
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="specialty-card text-center p-4 rounded-3 border h-100 bg-white">
-            <div class="icon-wrap mb-3 text-primary">
-              <img src="Image/Ophthalmology.png" alt="Ophthalmology">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Orthopedics.png" alt="Orthopedics" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Orthopedics</h6>
+              <small class="text-muted">34 Webinars</small>
             </div>
-            <h6 class="fw-bold text-dark mb-0 specialty-name">Ophthalmology</h6>
           </div>
         </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Diabetes.png" alt="Diabetes" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Diabetes</h6>
+              <small class="text-muted">41 Webinars</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Infectious Disease.png" alt="Infectious Disease" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Infectious Disease</h6>
+              <small class="text-muted">36 Webinars</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Pediatrics.png" alt="Pediatrics" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Pediatrics</h6>
+              <small class="text-muted">27 Webinars</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Genetics.png" alt="Genetics" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Genetics</h6>
+              <small class="text-muted">19 Webinars</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Ophthalmology.png" alt="Ophthalmology" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Ophthalmology</h6>
+              <small class="text-muted">23 Webinars</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/Dentistry.png" alt="Dentistry" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">Dentistry</h6>
+              <small class="text-muted">31 Webinars</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card specialty-card border-0 h-100">
+            <div class="card-body p-3">
+              <img src="Image/View All.png" alt="View All" class="mb-3 specialty-icon-img">
+              <h6 class="fw-bold text-dark mb-1">View All</h6>
+              <small class="text-muted">15+ More</small>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="py-5 bg-white">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold text-dark">Upcoming Live Sessions</h2>
-        <p class="text-muted">Register now for our upcoming expert-led webinars.</p>
+  <section class="upcoming-webinars-section py-5">
+  <div class="container py-4">
+    
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5">
+      <div class="text-center text-md-start mb-4 mb-md-0">
+        <h2 class="fw-bold display-6 mb-2">Upcoming Webinars</h2>
+        <p class="text-muted mb-0">Join live interactive sessions with leading experts</p>
       </div>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-6 col-lg-5"> 
-          <div class="card h-100 border rounded-4 shadow-sm overflow-hidden session-card">
-            <img src="Image/poster_1.png" class="card-img-top session-poster" alt="Classification of AUB">
-            <div class="card-body p-4 d-flex flex-column">
-              <div class="d-flex justify-content-between mb-2">
-                <span class="badge bg-light text-purple fw-bold border">Gynecology</span>
-                <span class="badge bg-light text-danger fw-bold border">1.0 CME</span>
-              </div>
-              <h5 class="card-title fw-bold text-dark mb-2">Classification of AUB</h5>
-              <p class="text-muted small mb-2">Decoding AUB: Clarity Through Classification & Systematic Approach.</p>
-              <div class="text-muted small mb-3">
-                <i class="fa-regular fa-calendar-days me-1"></i>
-                Jan 04, 2026 - 11:00 AM to 12:00 PM
-              </div>
-              <div class="d-flex align-items-center mb-4">
-                <img src="Image/dr_indraneel.png" class="rounded-circle border me-3" width="50" height="50" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
-                <div class="lh-sm">
-                  <div class="fw-bold text-dark small">Dr. Indraneel Ashok Jadhav</div>
-                  <div class="text-muted small fs-11">Consultant IVF & Gynecologist</div>
-                </div>
-              </div>
-              <a href="#" class="btn btn-custom-primary w-100 mt-auto fw-bold py-2">Register Now</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-5">
-          <div class="card h-100 border rounded-4 shadow-sm overflow-hidden session-card">
-            <img src="Image/poster_2.png" class="card-img-top session-poster" alt="Medical Management in AUB">
-            <div class="card-body p-4 d-flex flex-column">
-              <div class="d-flex justify-content-between mb-2">
-                <span class="badge bg-light text-purple fw-bold border">Gynecology</span>
-                <span class="badge bg-light text-danger fw-bold border">2.0 CME</span>
-              </div>
-              <h5 class="card-title fw-bold text-dark mb-2">Medical Management in AUB</h5>
-              <p class="text-muted small mb-2">Guideline-aligned approach to optimizing medical therapy.</p>
-              <div class="text-muted small mb-3">
-                <i class="fa-regular fa-calendar-days me-1"></i>
-                Jan 25, 2026 - 4:00 PM to 5:00 PM
-              </div>
-              <div class="d-flex align-items-center mb-4">
-                <img src="Image/dr_vartika.png" class="rounded-circle border me-3" width="50" height="50" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
-                <div class="lh-sm">
-                  <div class="fw-bold text-dark small">Dr. Vartika Srivastava</div>
-                  <div class="text-muted small fs-11">Consultant Gynecologist & Laparoscopic Surgeon</div>
-                </div>
-              </div>
-              <a href="#" class="btn btn-custom-primary w-100 mt-auto fw-bold py-2">Register Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="webinar.html" class="btn btn-outline-secondary fw-bold px-4 rounded-pill">View All Webinars <i class="fa-solid fa-arrow-right ms-2"></i></a>
     </div>
-  </section>
 
-  <section class="py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold text-dark">Meet Our Senior Advisors</h2>
-        <p class="text-muted">Learn from the best. Our senior advisors are leading voices in their respective fields.</p>
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border rounded-4 shadow-sm overflow-hidden webinar-grid-card">
+          <div class="position-relative">
+            <img src="Image/poster_1.png" class="card-img-top" alt="Cardiology" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/AAAAAA?text=Image'">
+            <div class="position-absolute top-0 start-0 m-3 badge bg-white text-custom fw-bold d-flex align-items-center gap-1 shadow-sm">
+                <span class="spinner-grow spinner-grow-sm text-danger live-indicator" role="status" aria-hidden="true"></span> <span class="text-dark">Live</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-3 badge bg-danger fw-bold shadow-sm">Tomorrow</div>
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+             <div class="d-flex gap-2 mb-2">
+                <span class="badge bg-light text-custom border">Cardiology</span>
+                <span class="badge bg-light text-purple border">CME 2.0</span>
+             </div>
+             <h6 class="card-title fw-bold text-dark mb-2 line-clamp-2">Advanced Heart Failure Management: Novel Therapeutic Approaches</h6>
+             
+             <div class="d-flex align-items-center gap-3 mb-3 small text-muted">
+                <div class="d-flex align-items-center gap-2"><i class="fa-regular fa-calendar"></i> Dec 6, 2024</div>
+                <div class="d-flex align-items-center gap-2"><i class="fa-regular fa-clock"></i> 6:00 PM IST</div>
+             </div>
+             
+             <div class="mt-auto d-flex align-items-center justify-content-between pt-2 border-top">
+                <div class="d-flex align-items-center gap-2">
+                   <img src="Image/doctor_1.png" class="rounded-circle border" width="32" height="32" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
+                   <div>
+                      <div class="fw-bold text-dark small">Dr. Rajesh Kumar</div>
+                      <div class="text-muted small" style="font-size: 0.7rem;">Cardiologist, AIIMS</div>
+                   </div>
+                </div>
+                <button class="btn btn-custom-primary btn-sm text-white fw-bold px-3">Register</button>
+             </div>
+          </div>
+        </div>
       </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border rounded-4 shadow-sm overflow-hidden webinar-grid-card">
+          <div class="position-relative">
+            <img src="Image/poster_1.png" class="card-img-top" alt="Oncology" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/AAAAAA?text=Image'">
+            <div class="position-absolute top-0 start-0 m-3 badge bg-white text-custom fw-bold d-flex align-items-center gap-1 shadow-sm">
+                <span class="spinner-grow spinner-grow-sm text-danger live-indicator" role="status" aria-hidden="true"></span> <span class="text-dark">Live</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-3 badge bg-warning text-white fw-bold shadow-sm">Dec 8</div>
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+             <div class="d-flex gap-2 mb-2">
+                <span class="badge bg-light text-custom border">Oncology</span>
+                <span class="badge bg-light text-purple border">CME 3.0</span>
+             </div>
+             <h6 class="card-title fw-bold text-dark mb-2 line-clamp-2">Immunotherapy Breakthroughs in Solid Tumor Management</h6>
+             
+             <div class="d-flex align-items-center gap-3 mb-3 small text-muted">
+                <div class="d-flex align-items-center gap-2"><i class="fa-regular fa-calendar"></i> Dec 8, 2024</div>
+                <div class="d-flex align-items-center gap-2"><i class="fa-regular fa-clock"></i> 7:00 PM IST</div>
+             </div>
+
+             <div class="mt-auto d-flex align-items-center justify-content-between pt-2 border-top">
+                <div class="d-flex align-items-center gap-2">
+                   <img src="Image/doctor_2.png" class="rounded-circle border" width="32" height="32" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
+                   <div>
+                      <div class="fw-bold text-dark small">Dr. Priya Sharma</div>
+                      <div class="text-muted small" style="font-size: 0.7rem;">Oncologist, TMH</div>
+                   </div>
+                </div>
+                <button class="btn btn-custom-primary btn-sm text-white fw-bold px-3">Register</button>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border rounded-4 shadow-sm overflow-hidden webinar-grid-card">
+          <div class="position-relative">
+            <img src="Image/poster_2.png" class="card-img-top" alt="Neurology" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/AAAAAA?text=Image'">
+            <div class="position-absolute top-0 start-0 m-3 badge bg-white text-custom fw-bold d-flex align-items-center gap-1 shadow-sm">
+                <span class="spinner-grow spinner-grow-sm text-danger live-indicator" role="status" aria-hidden="true"></span> <span class="text-dark">Live</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-3 badge bg-custom-primary fw-bold shadow-sm">Dec 10</div>
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+             <div class="d-flex gap-2 mb-2">
+                <span class="badge bg-light text-info border">Neurology</span>
+                <span class="badge bg-light text-purple border">CME 2.5</span>
+             </div>
+             <h6 class="card-title fw-bold text-dark mb-2 line-clamp-2">Neuroplasticity and Stroke Rehabilitation: Evidence-Based Protocols</h6>
+             
+             <div class="d-flex align-items-center gap-3 mb-3 small text-muted">
+                <div class="d-flex align-items-center gap-2"><i class="fa-regular fa-calendar"></i> Dec 10, 2024</div>
+                <div class="d-flex align-items-center gap-2"><i class="fa-regular fa-clock"></i> 5:30 PM IST</div>
+             </div>
+
+             <div class="mt-auto d-flex align-items-center justify-content-between pt-2 border-top">
+                <div class="d-flex align-items-center gap-2">
+                   <img src="Image/doctor_3.png" class="rounded-circle border" width="32" height="32" onerror="this.onerror=null;this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
+                   <div>
+                      <div class="fw-bold text-dark small">Dr. Amit Patel</div>
+                      <div class="text-muted small" style="font-size: 0.7rem;">Neurologist, NIMHANS</div>
+                   </div>
+                </div>
+                <button class="btn btn-custom-primary btn-sm text-white fw-bold px-3">Register</button>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section py-5 bg-light">
+    <div class="container py-4">
+      
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6 mb-3">What Healthcare Professionals Say</h2>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+          Join thousands of medical professionals who trust Zydemy for their continuing education
+        </p>
+      </div>
+
       <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border rounded-4 text-center p-4 shadow-sm advisor-card">
-            <div class="mx-auto mb-3 position-relative advisor-img-wrapper">
-              <img src="Image/doctor_4.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
+        
+        <div class="col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 testimonial-card">
+            <div class="card-body">
+              <div class="text-warning mb-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted mb-4 small" style="line-height: 1.8;">
+                "Zydemy has transformed how I stay updated with the latest medical advances. The quality of content and expert speakers is unmatched. It's my go-to platform for CME credits."
+              </p>
+              <div class="d-flex align-items-center gap-3">
+                <img src="Image/doctor_1.png" alt="Dr. Arun" class="rounded-circle object-fit-cover" width="50" height="50" onerror="this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark">Dr. Arun Mehta</h6>
+                  <small class="text-muted" style="font-size: 0.8rem;">Cardiologist, Mumbai</small>
+                </div>
+              </div>
             </div>
-            <h5 class="fw-bold text-dark mb-1">Dr. Marcus Thorne</h5>
-            <div class="text-custom fw-bold small mb-2">Cardiovascular Surgery</div>
-            <p class="text-muted small mb-3">MD, FACC | 25+ Years Experience</p>
-            <span class="badge bg-light text-custom border rounded-pill px-3 py-2 mt-auto align-self-center">
-              ⭐ Senior Advisor
-            </span>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border rounded-4 text-center p-4 shadow-sm advisor-card">
-            <div class="mx-auto mb-3 position-relative advisor-img-wrapper">
-              <img src="Image/doctor_3.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
+
+        <div class="col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 testimonial-card">
+            <div class="card-body">
+              <div class="text-warning mb-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted mb-4 small" style="line-height: 1.8;">
+                "The interactive format and ability to engage with expert speakers in real-time makes learning so much more effective. Highly recommend to all my colleagues."
+              </p>
+              <div class="d-flex align-items-center gap-3">
+                <img src="Image/doctor_2.png" alt="Dr. Sneha" class="rounded-circle object-fit-cover" width="50" height="50" onerror="this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark">Dr. Sneha Reddy</h6>
+                  <small class="text-muted" style="font-size: 0.8rem;">Pediatrician, Bangalore</small>
+                </div>
+              </div>
             </div>
-            <h5 class="fw-bold text-dark mb-1">Dr. Alisha Vance</h5>
-            <div class="text-purple fw-bold small mb-2">Endocrinology</div>
-            <p class="text-muted small mb-3">PhD, FACE | Zydus Research Lead</p>
-            <span class="badge bg-light text-custom border rounded-pill px-3 py-2 mt-auto align-self-center">
-              ⭐ Senior Advisor
-            </span>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border rounded-4 text-center p-4 shadow-sm advisor-card">
-            <div class="mx-auto mb-3 position-relative advisor-img-wrapper">
-              <img src="Image/doctor_2.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
+
+        <div class="col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 testimonial-card">
+            <div class="card-body">
+              <div class="text-warning mb-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted mb-4 small" style="line-height: 1.8;">
+                "Access to archived webinars is incredibly valuable. I can learn at my own pace and revisit complex topics. The certificate tracking is also very convenient."
+              </p>
+              <div class="d-flex align-items-center gap-3">
+                <img src="Image/doctor_3.png" alt="Dr. Vikram" class="rounded-circle object-fit-cover" width="50" height="50" onerror="this.src='https://placehold.co/50x50/EFEFEF/AAAAAA?text=Dr'">
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark">Dr. Vikram Singh</h6>
+                  <small class="text-muted" style="font-size: 0.8rem;">Oncologist, Delhi</small>
+                </div>
+              </div>
             </div>
-            <h5 class="fw-bold text-dark mb-1">Dr. Samuel Lee</h5>
-            <div class="text-danger fw-bold small mb-2">Oncology</div>
-            <p class="text-muted small mb-3">MD, PhD | National Cancer Institute</p>
-            <span class="badge bg-light text-custom border rounded-pill px-3 py-2 mt-auto align-self-center">
-              ⭐ Senior Advisor
-            </span>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border rounded-4 text-center p-4 shadow-sm advisor-card">
-            <div class="mx-auto mb-3 position-relative advisor-img-wrapper">
-              <img src="Image/doctor_1.png" class="w-100 h-100 rounded-circle border border-3 border-custom p-1 object-fit-cover" alt="Advisor" onerror="this.onerror=null;this.src='https://placehold.co/150x150/EFEFEF/AAAAAA?text=User'">
-            </div>
-            <h5 class="fw-bold text-dark mb-1">Dr. Isabella Rossi</h5>
-            <div class="text-info fw-bold small mb-2">Dermatology</div>
-            <p class="text-muted small mb-3">MD | Author, "The Skin Atlas"</p>
-            <span class="badge bg-light text-custom border rounded-pill px-3 py-2 mt-auto align-self-center">
-              ⭐ Senior Advisor
-            </span>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="pb-5 px-3">
-    <div class="container">
-      <div class="archive-banner p-5 rounded-4 text-white d-flex flex-column flex-lg-row align-items-center justify-content-between shadow">
-        <div class="mb-3 mb-lg-0 text-center text-lg-start">
-          <h2 class="fw-bold mb-2">Access Our Extensive Webinar Archive</h2>
-          <p class="mb-0 opacity-75">Missed a live session? Dive into our library of past webinars anytime, anywhere.</p>
+
+  <section class="experience-section py-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        
+        <div class="col-lg-6 mb-5 mb-lg-0 text-white">
+          <h2 class="fw-bold display-5 mb-4">Experience Learning Like Never Before</h2>
+          <p class="opacity-75 mb-5 lead fs-6">
+            Zydemy combines cutting-edge technology with world-class medical education to deliver an unparalleled learning experience.
+          </p>
+
+          <div class="d-flex flex-column gap-4">
+            
+            <div class="d-flex gap-3">
+              <div class="experience-icon-box">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Multi-Device Access</h5>
+                <p class="opacity-75 small mb-0">Learn on desktop, tablet, or mobile with seamless synchronization across all your devices.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+               <div class="experience-icon-box">
+                <i class="fa-solid fa-download"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Offline Viewing</h5>
+                <p class="opacity-75 small mb-0">Download webinars to watch offline at your convenience, perfect for busy schedules.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+               <div class="experience-icon-box">
+                <i class="fa-solid fa-language"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Multi-Language Support</h5>
+                <p class="opacity-75 small mb-0">Content available in English, Hindi, and regional languages with subtitles.</p>
+              </div>
+            </div>
+
+             <div class="d-flex gap-3">
+               <div class="experience-icon-box">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Progress Tracking</h5>
+                <p class="opacity-75 small mb-0">Monitor your learning journey with detailed analytics and achievement badges.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <a href="#" class="btn btn-light text-custom fw-bold px-4 py-2 rounded-2">Explore Archive</a>
+
+        <div class="col-lg-6">
+          <div class="position-relative text-center text-lg-end px-3">
+             <div class="experience-image-wrapper">
+                <img src="Image/dashboard_mockup.png" alt="Zydemy Dashboard" class="img-fluid rounded-3" onerror="this.src='https://placehold.co/600x400/2a2a2a/FFF?text=Dashboard+Mockup'">
+             </div>
+             
+             <div class="rated-badge d-inline-flex align-items-center gap-3">
+                <i class="fa-solid fa-trophy fa-xl text-dark"></i>
+                <div class="text-start lh-1 text-dark">
+                  <div class="fw-bold small">Rated #1</div>
+                  <div style="font-size: 0.7rem;" class="opacity-75">Medical Education Platform</div>
+                </div>
+             </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <footer class="footer-section text-white pt-5 pb-3">
-    <div class="container">
-      <div class="row g-4 mb-5">
-        <div class="col-lg-5">
-          <div class="mb-3">
-            <img src="Image/logo2.png" alt="Zydemy Logo" height="35">
-          </div>
-          <p class="text-white-50 small mb-0 footer-desc">A unified webinar platform by Zydus, dedicated to advancing medical education for healthcare professionals.</p>
-        </div>
-        <div class="col-lg-2 col-6">
-          <h6 class="fw-bold mb-3">Quick Links</h6>
-          <ul class="list-unstyled d-flex flex-column gap-2">
-            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Upcoming Webinars</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Webinar Archive</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Our Advisors</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">About Zydus</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-6">
-          <h6 class="fw-bold mb-3">Specialties</h6>
-          <ul class="list-unstyled d-flex flex-column gap-2">
-            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Cardiology</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Neurology</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">Oncology</a></li>
-            <li><a href="#" class="text-white-50 text-decoration-none small hover-white">More...</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3">
-          <h6 class="fw-bold mb-3">Follow Us</h6>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-white-50 hover-white"><i class="fa-brands fa-facebook fa-lg"></i></a>
-            <a href="#" class="text-white-50 hover-white"><i class="fa-brands fa-twitter fa-lg"></i></a>
-            <a href="#" class="text-white-50 hover-white"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-          </div>
-        </div>
+  <section class="divisions-section py-5 bg-white">
+    <div class="container py-4">
+      
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6 mb-2">Powered by Zydus Healthcare</h2>
+        <p class="text-muted mb-0">Access expert content from all Zydus divisions in one unified platform</p>
       </div>
-      <hr class="border-secondary opacity-25">
-      <div class="text-center pt-2">
-        <p class="text-white-50 small mb-0">© 2026 Zydus Healthcare. All rights reserved. For use by healthcare professionals only.</p>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
+        
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm division-card text-center p-3">
+            <div class="card-body">
+              <div class="division-icon-box mb-3 mx-auto">
+                <i class="fa-solid fa-pills"></i>
+              </div>
+              <h6 class="fw-bold mb-1 text-dark">Zydus Cadila</h6>
+              <small class="text-muted">Pharmaceuticals</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm division-card text-center p-3">
+            <div class="card-body">
+              <div class="division-icon-box mb-3 mx-auto">
+                <i class="fa-solid fa-flask"></i>
+              </div>
+              <h6 class="fw-bold mb-1 text-dark">Zydus Wellness</h6>
+              <small class="text-muted">Consumer Health</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm division-card text-center p-3">
+            <div class="card-body">
+              <div class="division-icon-box mb-3 mx-auto">
+                <i class="fa-solid fa-paw"></i>
+              </div>
+              <h6 class="fw-bold mb-1 text-dark">Zydus Animal Health</h6>
+              <small class="text-muted">Veterinary Care</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm division-card text-center p-3">
+            <div class="card-body">
+              <div class="division-icon-box mb-3 mx-auto">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <h6 class="fw-bold mb-1 text-dark">Zydus Biogen</h6>
+              <small class="text-muted">Biologics</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm division-card text-center p-3">
+            <div class="card-body">
+              <div class="division-icon-box mb-3 mx-auto">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <h6 class="fw-bold mb-1 text-dark">15+ Divisions</h6>
+              <a href="#" class="text-decoration-none small text-custom fw-bold">Explore All</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section py-5">
+    <div class="container py-5 text-center text-white">
+      
+      <h2 class="fw-bold display-5 mb-3">Ready to Elevate Your Medical Knowledge?</h2>
+      <p class="lead opacity-75 mb-5 mx-auto" style="max-width: 700px;">
+        Join 50,000+ healthcare professionals advancing their careers with Zydemy
+      </p>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-5">
+        <button class="btn btn-white fw-bold px-4 py-3 d-flex align-items-center justify-content-center gap-2" data-bs-toggle="modal" data-bs-target="#registerModal">
+          <i class="fa-solid fa-user-plus"></i> Create Free Account
+        </button>
+        
+        <button class="btn btn-outline-white fw-bold px-4 py-3 d-flex align-items-center justify-content-center gap-2">
+          <i class="fa-solid fa-circle-play"></i> Watch Demo
+        </button>
+      </div>
+
+      <div class="row justify-content-center g-4">
+        
+        <div class="col-md-3">
+          <div class="cta-icon-box mx-auto mb-3">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h6 class="fw-bold mb-1">Free Trial Access</h6>
+          <small class="opacity-75">No credit card required</small>
+        </div>
+
+        <div class="col-md-3">
+          <div class="cta-icon-box mx-auto mb-3">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h6 class="fw-bold mb-1">24/7 Access</h6>
+          <small class="opacity-75">Learn at your pace</small>
+        </div>
+
+        <div class="col-md-3">
+          <div class="cta-icon-box mx-auto mb-3">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h6 class="fw-bold mb-1">CME Credits</h6>
+          <small class="opacity-75">Instantly verifiable</small>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <footer class="footer-section text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+        <div class="col-lg-4 pe-lg-5">
+          <div class="mb-4">
+             <img src="Image/logo2.png" alt="Zydemy Logo" height="35" onerror="this.src='https://placehold.co/100x35/transparent/white?text=Zydemy'">
+          </div>
+          <p class="text-white-50 small mb-4 footer-desc" style="line-height: 1.6;">
+            Empowering healthcare professionals with world-class continuing medical education. A unified learning platform by Zydus Healthcare.
+          </p>
+          
+          <div class="d-flex gap-2">
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social-btn"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold text-white footer-heading">Platform</h6>
+          <div class="d-flex flex-column">
+            <a href="#" class="footer-link">Upcoming Webinars</a>
+            <a href="#" class="footer-link">Archive</a>
+            <a href="#" class="footer-link">Specialties</a>
+            <a href="#" class="footer-link">Advisors</a>
+            <a href="#" class="footer-link">CME Credits</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h6 class="fw-bold text-white footer-heading">Company</h6>
+          <div class="d-flex flex-column">
+            <a href="#" class="footer-link">About Zydemy</a>
+            <a href="#" class="footer-link">Zydus Healthcare</a>
+            <a href="#" class="footer-link">Careers</a>
+            <a href="#" class="footer-link">Press</a>
+            <a href="#" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h6 class="fw-bold text-white footer-heading">Support</h6>
+          <div class="d-flex flex-column">
+            <a href="#" class="footer-link">Help Center</a>
+            <a href="#" class="footer-link">FAQs</a>
+            <a href="#" class="footer-link">Technical Support</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Service</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-top border-secondary border-opacity-25 pt-4 mt-2">
+        <div class="text-center">
+          <p class="text-white-50 small mb-0">© 2026 Zydus Healthcare. All rights reserved. For use by healthcare professionals only.</p>
+        </div>
       </div>
     </div>
   </footer>

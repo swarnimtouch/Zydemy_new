@@ -1,23 +1,22 @@
 $(document).ready(function () {
   
-  // Open Sidebar
+  // --- Sidebar Logic ---
   $('#sidebarOpen').on('click', function() {
     $('#mobileSidebar').addClass('active');
     $('#sidebarOverlay').addClass('active');
   });
 
-  // Close Sidebar (via Close Button)
   $('#sidebarClose').on('click', function() {
     $('#mobileSidebar').removeClass('active');
     $('#sidebarOverlay').removeClass('active');
   });
 
-  // Close Sidebar (via Overlay Click)
   $('#sidebarOverlay').on('click', function() {
     $('#mobileSidebar').removeClass('active');
     $(this).removeClass('active');
   });
 
+  // --- Login Form Validation ---
   $('#loginForm').validate({
     rules: {
       loginEmail: {
@@ -44,6 +43,7 @@ $(document).ready(function () {
     }
   });
 
+  // --- Register Form Validation ---
   $('#registerForm').validate({
     rules: {
       regName: {

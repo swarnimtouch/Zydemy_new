@@ -1,5 +1,6 @@
 $(document).ready(function () {
- 
+  
+  // --- Sidebar Logic ---
   $('#sidebarOpen').on('click', function() {
     $('#mobileSidebar').addClass('active');
     $('#sidebarOverlay').addClass('active');
@@ -15,14 +16,7 @@ $(document).ready(function () {
     $(this).removeClass('active');
   });
 
-  $('#mobileFilterToggle').on('click', function() {
-    $('#filterSidebar').slideToggle();
-  });
-  
-  $('#closeFilterBtn').on('click', function() {
-    $('#filterSidebar').slideUp();
-  });
-
+  // --- Login Form Validation ---
   $('#loginForm').validate({
     rules: {
       loginEmail: {
@@ -49,6 +43,7 @@ $(document).ready(function () {
     }
   });
 
+  // --- Register Form Validation ---
   $('#registerForm').validate({
     rules: {
       regName: {
@@ -91,27 +86,4 @@ $(document).ready(function () {
     }
   });
 
-  $('#subscribeForm').validate({
-    rules: {
-      subEmail: {
-        required: true,
-        email: true
-      }
-    },
-    messages: {
-      subEmail: {
-        required: "Please enter your email address",
-        email: "Please enter a valid email address"
-      }
-    },
-    submitHandler: function(form) {
-      alert('Thanks for subscribing! You will receive updates shortly.');
-      form.reset();
-    }
-  });
-
-  $('#resetFilters').on('click', function() {
-    $('.filter-sidebar input[type="checkbox"]').prop('checked', false);
-    $('#allUpcoming').prop('checked', true);
-  });
 });

@@ -106,7 +106,6 @@ a {
 
 .home-hero {
   position: relative;
-
   background-image: url("Image/doctors_bg.png");
   background-size: cover;
   background-position: center;
@@ -115,7 +114,6 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-
   padding-bottom: 80px;
 }
 
@@ -260,7 +258,6 @@ a {
 .stat-number {
   font-size: 2.2rem;
   font-weight: 600;
-
   background: linear-gradient(135deg, #17a2b8 0%, #9c27b0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -412,20 +409,6 @@ label.error {
 }
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.7) !important;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.footer-link:hover {
-  color: #fff !important;
-  padding-left: 5px;
-}
-
-.footer-link {
   color: #b0b0b0 !important;
   text-decoration: none;
   font-size: 0.95rem;
@@ -542,7 +525,6 @@ label.error {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-
   background: linear-gradient(135deg, #17a2b8 0%, #6f42c1 100%);
   display: flex;
   align-items: center;
@@ -660,4 +642,24 @@ label.error {
   .hero-title-small {
     font-size: 2rem;
   }
+}
+
+.mw-700 {
+  max-width: 700px;
+}
+
+.lh-18 {
+  line-height: 1.8;
+}
+
+.lh-16 {
+  line-height: 1.6;
+}
+
+.fs-07 {
+  font-size: 0.7rem !important;
+}
+
+.fs-08 {
+  font-size: 0.8rem !important;
 }
